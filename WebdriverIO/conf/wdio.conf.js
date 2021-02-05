@@ -7,13 +7,6 @@ exports.config = {
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
     runner: 'local',
-    user: 'ericwang11',
-    key: 'y8pJzxhu1ZVYw6zyxqqs',
-    services: [
-        ['browserstack', {
-            browserstackLocal: false
-        }]
-    ],
     //
     // ==================
     // Specify Test Files
