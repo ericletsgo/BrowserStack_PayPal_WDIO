@@ -1,105 +1,59 @@
-# node-appium-app-browserstack
+# webdriverio-appium-app-browserstack
+This repository demonstrates how to run Appium tests using [WebdriverIO](http://webdriver.io/) on BrowserStack App Automate.
 
-This repository demonstrates how to run Appium NodeJS tests on BrowserStack App Automate.
+<div align="center">
+<img src = "https://www.browserstack.com/images/layout/browserstack-logo-600x315.png" > <br>
+<img src = "https://webdriver.io/img/webdriverio.png"  height="140px">
+</div>
+
+Code samples to get started with Appium tests for your Native App using WebdriverIO.
 
 ## Setup
 
 ### Requirements
 
-1. Node.js
-
-    - If not installed, install Node.js from [here](https://nodejs.org/en/download/)
-
-    - Ensure you have node & npm installed by running `node -v` & `npm -v`
+* Node.js 8.11.2+
+  - If you don't have Node installed, download it from [here](https://nodejs.org/en/)
 
 ### Install the dependencies
 
-To install the dependencies run the following command in the project's base directory :
+For Android tests, run the following command in project's base directory :
 
+```sh
+cd android
+npm i
 ```
-npm install
+
+Or,
+
+For dependencies for iOS tests, run following command in project's base directory :
+
+```sh
+cd ios
+npm i
 ```
 
 ## Getting Started
 
-Getting Started with Appium tests in NodeJS on BrowserStack couldn't be easier!
+Getting Started with Appium tests using WebdriverIO on BrowserStack couldn't be easier!
 
-### Run your first test :
+### Run first test:
+  - Test script is available in `run-first-test` directory under [Android examples](./android) or [iOS examples](./ios)
+  - Follow the steps outlined in the documentation - [Get Started with your first test on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/nodejs/webdriverio)
 
-**1. Upoad your Android or iOS App**
+### Speed up test execution with parallel testing :
 
-Upload your Android app (.apk or .aab file) or iOS app (.ipa file) to BrowserStack servers using our REST API. Here is an example cURL request :
+- Test script is available in  `run-parallel-test` directory under [Android examples](./android) or [iOS examples](./ios)
+- Follow the steps outlined in the documentation - [Get Started with parallel testing on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/nodejs/webdriverio/parallelize-tests)
 
-```
-curl -u "YOUR_USERNAME:YOUR_ACCESS_KEY" \
--X POST "https://api-cloud.browserstack.com/app-automate/upload" \
--F "file=@/path/to/apk/file"
-```
+### Use Local testing for apps that access resources hosted in development or testing environments :
 
-Ensure that @ symbol is prepended to the file path in the above request. Please note the `app_url` value returned in the API response. We will use this to set the application under test while configuring the test later on.
+- Test script is available in `run-local-test` directory under [Android examples](./android) or [iOS examples](./ios)
+- Follow the steps outlined in the documentation - [Get Started with Local testing on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/nodejs/webdriverio/local-testing)
 
-**Note**: If you do not have an .apk or .ipa file and are looking to simply try App Automate, you can download and test using our [sample Android app](https://www.browserstack.com/app-automate/sample-apps/android/WikipediaSample.apk) or [sample iOS app](https://www.browserstack.com/app-automate/sample-apps/ios/BStackSampleApp.ipa).
-
-**2. Configure and run your first test**
-
-Open `BrowserStackSample.js` file in `Android` or in `ios` folder
-
-- Replace `YOUR_USERNAME` & `YOUR_ACCESS_KEY` with your BrowserStack access credentials. Get your BrowserStack access credentials from [here](https://www.browserstack.com/accounts/settings)
-
-- Replace `bs://<app-id>` wkth the URL obtained from app upload step
-
-- Set the device and OS version
-
-- If you have uploaded your own app update the test case
-
-- Run `node BrowserStackSample.js`
-
-- You can access the test execution results, and debugging information such as video recording, network logs on [App Automate dashboard](https://app-automate.browserstack.com/dashboard)
-
----
-
-### **Use Local testing for apps that access resources hosted in development or testing environments :**
-
-**1. Upload your Android or iOS App**
-
-Upload your Android app (.apk or .aab file) or iOS app (.ipa file) that access resources hosted on your internal or test environments to BrowserStack servers using our REST API. Here is an example cURL request :
-
-```
-curl -u "YOUR_USERNAME:YOUR_ACCESS_KEY" \
--X POST "https://api-cloud.browserstack.com/app-automate/upload" \
--F "file=@/path/to/apk/file"
-```
-
-Ensure that @ symbol is prepended to the file path in the above request. Please note the `app_url` value returned in the API response. We will use this to set the application under test while configuring the test later on.
-
-**Note**: If you do not have an .apk or .ipa file and are looking to simply try App Automate, you can download and test using our [sample Android Local app](https://www.browserstack.com/app-automate/sample-apps/android/LocalSample.apk) or [sample iOS Local app](https://www.browserstack.com/app-automate/sample-apps/ios/LocalSample.ipa).
-
-**2. Configure and run your local tes**
-
-Open `BrowserStackSampleLocal.js` file in `Android` or in `ios` folder
-
-- Replace `YOUR_USERNAME` & `YOUR_ACCESS_KEY` with your BrowserStack access credentials. Get your BrowserStack access credentials from [here](https://www.browserstack.com/accounts/settings)
-
-- Replace `bs://<app-id>` wkth the URL obtained from app upload step
-
-- Set the device and OS version
-
-- Ensure that `browserstack.local` capability is set to `true`. Within the test script, there is code snippet that automatically establishes Local Testing connection to BrowserStack servers using Javascript binding for BrowserStack Local.
-
-- If you have uploaded your own app update the test case
-
-- Run `node BrowserStackSampleLocal.js`
-
-- You can access the test execution results, and debugging information such as video recording, network logs on [App Automate dashboard](https://app-automate.browserstack.com/dashboard)
-
-## Integration with other NodeJS frameworks
-
-For other NodeJS frameworks samples, refer to following repositories :
-
-- [WebdriverIO](https://github.com/browserstack/webdriverio-appium-app-browserstack)
-
-Note: For other test frameworks supported by App-Automate refer our [Developer documentation](https://www.browserstack.com/docs/)
+**Note**: For other test frameworks supported by App-Automate refer our [Developer documentation](https://www.browserstack.com/docs/)
 
 ## Getting Help
 
 If you are running into any issues or have any queries, please check [Browserstack Support page](https://www.browserstack.com/support/app-automate) or [get in touch with us](https://www.browserstack.com/contact?ref=help).
+
