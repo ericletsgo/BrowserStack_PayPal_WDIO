@@ -10,7 +10,7 @@ exports.config = {
 
   capabilities: [{
     browser: 'Chrome',
-    geoLocation: 'SE',
+    'browserstack.geoLocation': 'SE', // browesrstack.geoLocation:
     name: 'Geolocation - Sweden',
     build: 'PayPal'
   }],
