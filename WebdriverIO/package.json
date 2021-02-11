@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "basic": "./node_modules/.bin/wdio conf/browserstack_single.conf.js ",
-    "geolocation": "./node_modules/.bin/wdio conf/browserstack_geolocation.conf.js "
+    "iframe": "./node_modules/.bin/wdio conf/iframe.conf.js ",
+    "geolocation": "./node_modules/.bin/wdio conf/geolocation.conf.js "
   },
   "author": "",
   "license": "ISC",
