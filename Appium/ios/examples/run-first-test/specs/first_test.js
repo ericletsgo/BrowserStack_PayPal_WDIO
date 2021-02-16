@@ -1,9 +1,9 @@
 var assert = require('assert');
 
 describe('Mobile flow verification', () => {
-  it('should launch venmo app after going through mobile flow', async () => {
-    const contexts = await driver.getContexts();
-    await driver.switchContext(contexts[1]);
+  it('should launch venmo app after going through mobile flow', () => {
+    const contexts = driver.getContexts();
+    driver.switchContext(contexts[1]);
 
     // var textButton = await $(`~Text Button`);
     // await textButton.waitForDisplayed({ timeout: 30000 });

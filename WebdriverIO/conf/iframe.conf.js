@@ -1,6 +1,6 @@
 exports.config = {
-  user: process.env.BROWSERSTACK_USERNAME || 'ericwang12',
-  key: process.env.BROWSERSTACK_ACCESS_KEY || 'MVztxmZaCjR51Sygtmhp',
+  user: process.env.BROWSERSTACK_USERNAME || '<BROWSERSTACK_USER>',
+  key: process.env.BROWSERSTACK_ACCESS_KEY || '<BROWSERSTACK_KEY>',
 
   updateJob: false,
   specs: [
@@ -23,15 +23,8 @@ exports.config = {
         device : "Samsung Galaxy S20", 
         real_mobile : "true",
       },
-      // { 
-      //   browserName: 'iPhone',
-      //   os_version : "14", 
-      //   device : "iPhone 12 Pro", 
-      //   real_mobile : "true",
-      // },
   ],
 
-  // logLevel: 'warn',
   coloredLogs: true,
   screenshotPath: './errorShots/',
   baseUrl: '',
