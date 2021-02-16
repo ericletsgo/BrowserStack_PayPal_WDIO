@@ -3,7 +3,7 @@ describe('geolocation', () => {
       browser.url('https://paypal.github.io/react-paypal-js/iframe.html?id=example-venmobutton--horizontal&viewMode=story');
 
       const frame = $('/html/body/div[3]/div/div/iframe[1]');
-      frame.waitForExist();
+      frame.waitForDisplayed();
 
       browser.switchToFrame(frame);
 

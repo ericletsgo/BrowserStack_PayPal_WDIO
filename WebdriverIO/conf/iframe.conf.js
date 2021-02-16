@@ -1,6 +1,6 @@
 exports.config = {
-  user: process.env.BROWSERSTACK_USERNAME || '<BROWSERSTACK_USER>',
-  key: process.env.BROWSERSTACK_ACCESS_KEY || '<BROWSERSTACK_KEY>',
+  user: process.env.BROWSERSTACK_USERNAME || 'ericwang12',
+  key: process.env.BROWSERSTACK_ACCESS_KEY || 'MVztxmZaCjR51Sygtmhp',
 
   updateJob: false,
   specs: [
@@ -13,10 +13,6 @@ exports.config = {
   },
 
   capabilities: [
-      { 
-        os: 'Windows', 
-        os_version: "10", 
-        browser: 'chrome', },
       { 
         browserName: 'android', 
         os_version : "10.0", 
