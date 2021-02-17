@@ -4,7 +4,7 @@ exports.config = {
 
   updateJob: false,
   specs: [
-    './test/specs/iframe.js'
+    './specs/iframe.js'
   ],
   exclude: [],
 

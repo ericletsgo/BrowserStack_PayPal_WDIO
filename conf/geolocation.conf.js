@@ -4,7 +4,7 @@ exports.config = {
 
   updateJob: false,
   specs: [
-    './test/specs/geolocation.js'
+    './specs/geolocation.js'
   ],
   exclude: [],
 

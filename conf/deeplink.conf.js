@@ -4,7 +4,7 @@ exports.config = {
 
   updateJob: false,
   specs: [
-    './test/specs/deeplink.js'
+    './specs/deeplink.js'
   ],
   exclude: [],
 

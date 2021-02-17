@@ -12,6 +12,8 @@ describe('iFrame selection', () => {
         payPalButton.waitForDisplayed();
         payPalButton.click();
 
+        driver.pause(1000);
+
         browser.switchWindow('Log in to your PayPal account');
 
         expect(browser).toHaveUrlContaining('https://www.paypal.com/checkoutnow?sessionID=');
