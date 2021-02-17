@@ -1,5 +1,5 @@
 
-describe('iFrame selection', () => {
+describe('iFrame', () => {
     it('should let me find elements within the iFrame', () => {
         browser.url('https://paypal.github.io/react-paypal-js/iframe.html?id=example-venmobutton--horizontal&viewMode=story');
 

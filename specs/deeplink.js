@@ -1,7 +1,7 @@
 const expectChai = require('chai').expect;
 
 describe('Deep Link', () => {
-    it('can switch between app and browser', () => {
+    it('should let me switch between app and browser', () => {
 
         var chromePackage = "com.android.chrome";
         var chromeActivity = "com.google.android.apps.chrome.Main";
@@ -33,7 +33,6 @@ describe('Deep Link', () => {
         driver.startActivity(appPackage, appActivity);
 
         var currentActivity = driver.getCurrentActivity();
-        expectChai(currentActivity).to.equal(appActivity); 
-        
+        expectChai(currentActivity).to.equal(appActivity);
     });
 });

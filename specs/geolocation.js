@@ -1,4 +1,4 @@
-describe('geolocation', () => {
+describe('GeoLocation', () => {
   it('should load German version of PayPal button', () => {
       browser.url('https://paypal.github.io/react-paypal-js/iframe.html?id=example-venmobutton--horizontal&viewMode=story');
 

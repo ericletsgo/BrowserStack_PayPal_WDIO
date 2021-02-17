@@ -8,13 +8,26 @@ exports.config = {
   ],
   exclude: [],
 
-  capabilities: [{
+  commonCapabilities: {
+    build: 'Mobile Device Test Examples',
     project: "PayPal SDK",
-    build: 'PayPal Deep Linking',
-    device: 'Google Pixel 3',
-    os_version: "9.0",
-    app: process.env.BROWSERSTACK_APP_ID
-  }],
+  },
+
+  capabilities: [
+      { 
+        os_version : "9.0", 
+        device: 'Google Pixel 3',
+        app: process.env.BROWSERSTACK_APP_ID
+      },
+  ],
+
+  // capabilities: [{
+  //   project: "PayPal SDK",
+  //   build: 'Mobile Device Test Examples',
+  //   device: 'Google Pixel 3',
+  //   os_version: "9.0",
+  //   app: process.env.BROWSERSTACK_APP_ID
+  // }],
 
   coloredLogs: true,
   screenshotPath: './errorShots/',
@@ -35,5 +48,8 @@ exports.config = {
     ui: 'bdd',
     timeout: 60*1000
   },
-
 };
+
+exports.config.capabilities.forEach(function(caps){
+  for(var i in exports.config.commonCapabilities) caps[i] = caps[i] || exports.config.commonCapabilities[i];
+});
