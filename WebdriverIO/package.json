@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "iframe": "./node_modules/.bin/wdio conf/iframe.conf.js ",
-    "geolocation": "./node_modules/.bin/wdio conf/geolocation.conf.js "
+    "geolocation": "./node_modules/.bin/wdio conf/geolocation.conf.js ",
+    "deeplink": "./node_modules/.bin/wdio conf/deeplink.conf.js "
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +19,7 @@
     "@wdio/spec-reporter": "^6.11.0",
     "@wdio/sync": "^6.11.0",
     "chromedriver": "^88.0.0",
-    "wdio-chromedriver-service": "^6.0.4"
+    "wdio-chromedriver-service": "^6.0.4",
+    "chai": "^4.3.0"
   }
 }

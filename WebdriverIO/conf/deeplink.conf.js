@@ -4,7 +4,7 @@ exports.config = {
 
   updateJob: false,
   specs: [
-    './examples/run-first-test/specs/first_test.js'
+    './test/specs/deeplink.js'
   ],
   exclude: [],
 
@@ -13,7 +13,7 @@ exports.config = {
     build: 'PayPal Deep Linking',
     device: 'Google Pixel 3',
     os_version: "9.0",
-    app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>'
+    app: process.env.BROWSERSTACK_APP_ID
   }],
 
   coloredLogs: true,
