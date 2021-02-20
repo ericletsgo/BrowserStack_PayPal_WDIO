@@ -21,18 +21,10 @@ exports.config = {
       },
   ],
 
-  // capabilities: [{
-  //   project: "PayPal SDK",
-  //   build: 'Mobile Device Test Examples',
-  //   device: 'Google Pixel 3',
-  //   os_version: "9.0",
-  //   app: process.env.BROWSERSTACK_APP_ID
-  // }],
-
   coloredLogs: true,
   screenshotPath: './errorShots/',
   baseUrl: '',
-  waitforTimeout: 60*1000,
+  waitforTimeout: 10*1000,
   connectionRetryTimeout: 90*1000,
   connectionRetryCount: 3,
 
