@@ -4,20 +4,21 @@ exports.config = {
 
   updateJob: false,
   specs: [
-    './specs/deeplink.js'
+    './specs/deeplink-ios.js'
   ],
   exclude: [],
 
   commonCapabilities: {
     build: 'Mobile Device Test Examples',
     project: "PayPal SDK",
+    autoDismissAlerts: true,
   },
 
   capabilities: [
       { 
-        os_version : "9.0", 
-        device: 'Google Pixel 3',
-        app: process.env.BROWSERSTACK_APP_ID
+        os_version: "14",
+        device: "iPhone 12",
+        app: process.env.BROWSERSTACK_IOS_APP_ID
       },
   ],
 
@@ -38,7 +39,7 @@ exports.config = {
 
   mochaOpts: {
     ui: 'bdd',
-    timeout: 60*1000
+    timeout: 180*1000
   },
 };
 

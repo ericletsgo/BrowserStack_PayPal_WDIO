@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "iframe": "./node_modules/.bin/wdio conf/iframe.conf.js ",
     "geolocation": "./node_modules/.bin/wdio conf/geolocation.conf.js ",
-    "deeplink": "./node_modules/.bin/wdio conf/deeplink.conf.js "
+    "deeplink": "./node_modules/.bin/wdio conf/deeplink.conf.js ",
+    "deeplink-ios": "./node_modules/.bin/wdio conf/deeplink-ios.conf.js "
   },
   "author": "",
   "license": "ISC",
