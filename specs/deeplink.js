@@ -25,7 +25,8 @@ describe('Deep Link', () => {
         // Click button within iframe
         const payPalButton = $('/html/body/div[1]/div/div[1]/div');
         payPalButton.click();
-
+        
+        var venmoText = $('android=new UiSelector().text("Venmo").className("android.widget.TextView")');
         // Perform the rest of your test in the native app
         driver.pause(3000);
         driver.startActivity(appPackage, appActivity);
